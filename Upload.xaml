@@ -1,0 +1,115 @@
+﻿<Page
+    x:Class="PROYECTWEVENTS.Z_Proyect_Pages.Upload"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:PROYECTWEVENTS.Z_Proyect_Pages"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="#e6e6e6">
+    <ScrollViewer VerticalScrollBarVisibility="Auto">
+        <Grid Background="#e6e6e6" Padding="12" HorizontalAlignment="Center" x:Name="SafeAreaGrid" VerticalAlignment="Top">
+        <Border Padding="10" Width="350" Background="#e6e6e6">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+
+                    <Button Content="Volver"
+                        Style="{StaticResource CustomBackButtonStyle}"
+                        Click="CustomBacc_Click"
+                        Foreground="#0d99ff"/>
+                
+                    <StackPanel Grid.Row="1" VerticalAlignment="Top" HorizontalAlignment="Center" Margin="0,12,0,0" Spacing="25">
+
+                    <TextBlock Text="Cargar Documentos"
+                               FontSize="20"
+                               Margin="15,0,0,20"
+                               FontWeight="Bold"
+                               TextAlignment="Center"
+                               HorizontalAlignment="Center"
+                               Style="{StaticResource LabelContext}"/>
+
+                    <StackPanel Spacing="5">
+                        <Button x:Name="BrowsePDFButton"
+                                Content="Cargar archivo PDF"
+                                Click="BrowsePDFButton_Click"
+                                Style="{StaticResource CustomBackButtonStyle}"
+                                FontSize="16"
+                                FontWeight="Bold"
+                                HorizontalAlignment="Center"
+                                Foreground="#0d99ff"/>
+                        <TextBlock x:Name="SelectedPDFText"
+                                   Text="Ningún archivo PDF seleccionado"
+                                   FontSize="14"
+                                   TextAlignment="Center"
+                                   HorizontalAlignment="Center"
+                                   Margin="0,5,0,0"/>
+                        <Image x:Name="PDFIcon"
+                               Width="100"
+                               Height="100"
+                               Source="/Assets/Icons/pdf.png"
+                               Visibility="Collapsed"
+                               HorizontalAlignment="Center"/>
+                    </StackPanel>
+
+
+
+                    <StackPanel Spacing="5">
+                        <Button x:Name="BrowseIMGButton"
+                                Content="Cargar imagen de INE frontal(JPG/PNG)"
+                                Click="BrowseIMGButton_Click"
+                                Style="{StaticResource CustomBackButtonStyle}"
+                                FontSize="16"
+                                FontWeight="Bold"
+                                HorizontalAlignment="Center"
+                                Foreground="#0d99ff"/>
+                        <TextBlock x:Name="SelectedIMGText"
+                                   Text="Ninguna imagen seleccionada"
+                                   FontSize="14"
+                                   TextAlignment="Center"
+                                   HorizontalAlignment="Center"
+                                   Margin="0,5,0,0"/>
+                        <Image x:Name="IMGIcon"
+                               Width="100"
+                               Height="100"
+                               Source="/Assets/Icons/desktopicon.png"
+                               Visibility="Collapsed"
+                               HorizontalAlignment="Center"/>
+                    </StackPanel>
+                    <StackPanel Spacing="5">
+                        <Button x:Name="BrowseIMGButton2"
+                            Content="Cargar imagen de INE trasera (JPG/PNG)"
+                            Click="BrowseIMGButton2_Click"
+                            Style="{StaticResource CustomBackButtonStyle}"
+                            FontSize="16"
+                            FontWeight="Bold"
+                            HorizontalAlignment="Center"
+                            Foreground="#0d99ff"/>
+                        <TextBlock x:Name="SelectedIMGText2"
+                           Text="Ninguna imagen seleccionada"
+                           FontSize="14"
+                           TextAlignment="Center"
+                           HorizontalAlignment="Center"
+                           Margin="0,5,0,0"/>
+                        <Image x:Name="IMGIcon2"
+                           Width="100"
+                           Height="100"
+                           Source="/Assets/Icons/desktopicon.png"
+                           Visibility="Collapsed"
+                           HorizontalAlignment="Center"/>
+                    </StackPanel>
+                        <Button x:Name="BotonSiguiente"
+                            Content="Siguiente"
+                            Click="PaginaS_Click"
+                            FontSize="20"
+                            FontWeight="Bold"
+                            HorizontalAlignment="Center"
+                            Margin="0,20,0,0"/>
+                </StackPanel>
+            </Grid>
+        </Border>
+    </Grid>
+    </ScrollViewer>
+</Page>

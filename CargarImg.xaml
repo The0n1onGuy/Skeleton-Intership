@@ -1,0 +1,54 @@
+﻿<Page
+    x:Class="PROYECTWEVENTS.Z_Proyect_Pages.CargarImg"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:PROYECTWEVENTS.Z_Proyect_Pages"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="#e6e6e6">
+    <ScrollViewer VerticalScrollBarVisibility="Auto">
+        <Grid Background="#e6e6e6" x:Name="SafeAreaGrid" Padding="12" HorizontalAlignment="Center" VerticalAlignment="Top">
+            <Border Padding="10"
+                Width="350"
+                Background="#e6e6e6">
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto"/>
+
+                        <RowDefinition Height="*"/>
+
+                    </Grid.RowDefinitions>
+
+                    <Button Content="Volver" Style="{StaticResource CustomBackButtonStyle}" Click="CustomBacc_Click" Foreground="#0d99ff"/>
+
+                    <StackPanel Grid.Row="1"
+                            VerticalAlignment="Top"
+                            HorizontalAlignment="Center"
+                            Margin="0,12,0,0" Spacing="20">
+                        <StackPanel Spacing="5">
+                            <Button Content="Tomar foto"
+                                Click="TomarFoto_Click"
+                                HorizontalAlignment="Center"/>
+
+                            <Button Content="Usar galería"
+                                Click="ElegirDeGaleria_Click"
+                                HorizontalAlignment="Center"
+                                Margin="0,10,0,0"/>
+
+                            <Image x:Name="CapturedImage"
+                                Width="220" Height="220"
+                                Stretch="UniformToFill"
+                                Margin="0,15,0,0"/>
+
+                            <Button Content="Subir Documentos"
+                                Click="SubirDoc_Click"
+                                HorizontalAlignment="Center"
+                                Margin="0,10,0,0"/>
+                        </StackPanel>
+                    </StackPanel>
+                </Grid>
+            </Border>
+        </Grid>
+    </ScrollViewer>
+</Page>
